@@ -82,52 +82,9 @@ python eduinvest.py
 
 ---
 
-## The AI component (placeholder)
+## The AI component
 
 - The repository includes a simple placeholder function that returns `Up` or `Down` (and previously a confidence). This is intentionally lightweight for the hackathon demo.
 - The placeholder is located in `eduinvest.py` (the `model_predict_direction` function delegates to a model wrapper). The real model would be a PyTorch model that consumes three modalities (time-series transformer, GNN, sentiment LSTM) in `model.py`.
 - For the demo, the AI provides a direction that the UI compares against the user's guess.
 
----
-
-## Screenshots
-
-*(Placeholders — replace these with actual screenshots in the repo `images/` folder.)*
-
-- Main window with trending list and chart: `screenshots/main_window.png`
-- Prediction dialog showing result: `screenshots/result_dialog.png`
-
----
-
-## Limitations & future improvements
-
-Limitations:
-- The current AI is a placeholder — it is not trained and not intended for real trading.
-- Packaging heavy ML dependencies into a native `.app` is non-trivial and may produce very large bundles.
-- The app makes network requests at runtime (yfinance, news scraping) and requires internet access.
-
-Future improvements:
-- Replace the placeholder AI with a trained model and provide model weights.
-- Host the model behind an API for a lightweight GUI client (reduces distribution size).
-- Add user-selectable timeframes and indicators (moving averages, RSI).
-- Add a leaderboard and session persistence.
-- Improve UX: add confidence display toggle, richer visualizations, and an onboarding tutorial.
-
----
-
-## Hackathon pitch summary
-
-EduInvest is an educational desktop app that gamifies learning about financial markets. Students guess a stock's short-term movement and compare their intuition with an AI. The project emphasizes explainability, quick interaction, and modular design so educators can extend it for lessons.
-
-Key selling points:
-- Simple, approachable GUI for beginners.
-- Demonstrates time-series visualization and AI-assisted reasoning.
-- Modular architecture for swapping in stronger models or remote inference.
-
----
-
-## License
-
-This project is provided under the MIT License. See `LICENSE` for full terms.
-
-*(License placeholder — add an actual `LICENSE` file if you choose MIT.)*
